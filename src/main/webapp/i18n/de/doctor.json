@@ -1,0 +1,23 @@
+{
+  "test04App": {
+    "doctor": {
+      "home": {
+        "title": "Doctors",
+        "createLabel": "Doctor erstellen",
+        "createOrEditLabel": "Doctor erstellen oder bearbeiten",
+        "notFound": "No Doctors found"
+      },
+      "created": "Doctor erstellt mit ID {{ param }}",
+      "updated": "Doctor aktualisiert mit ID {{ param }}",
+      "deleted": "Doctor gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Doctor {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Doctor"
+      },
+      "name": "Name",
+      "visitor": "Visitor"
+    }
+  }
+}

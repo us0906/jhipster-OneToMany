@@ -1,0 +1,23 @@
+{
+  "test04App": {
+    "visitor": {
+      "home": {
+        "title": "Visitors",
+        "createLabel": "Visitor erstellen",
+        "createOrEditLabel": "Visitor erstellen oder bearbeiten",
+        "notFound": "No Visitors found"
+      },
+      "created": "Visitor erstellt mit ID {{ param }}",
+      "updated": "Visitor aktualisiert mit ID {{ param }}",
+      "deleted": "Visitor gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Visitor {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Visitor"
+      },
+      "name": "Name",
+      "doctor": "Doctor"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="visitor">
+            <h2><span jhiTranslate="test04App.visitor.detail.title">Visitor</span> {{ visitor.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="test04App.visitor.name">Name</span></dt>
+                <dd>
+                    <span>{{ visitor.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="test04App.visitor.doctor">Doctor</span></dt>
+                <dd>
+                    <div *ngIf="visitor.doctor">
+                        <a [routerLink]="['/doctor', visitor.doctor?.id, 'view']">{{ visitor.doctor?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/visitor', visitor.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

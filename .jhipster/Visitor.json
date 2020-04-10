@@ -1,0 +1,29 @@
+{
+    "name": "Visitor",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "doctor",
+            "otherEntityRelationshipName": "visitor",
+            "relationshipName": "doctor",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200410084300",
+    "entityTableName": "visitor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

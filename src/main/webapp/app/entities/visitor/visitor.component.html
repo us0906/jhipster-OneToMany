@@ -1,0 +1,67 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="test04App.visitor.home.title">Visitors</span>
+
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-visitor" [routerLink]="['/visitor/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span  jhiTranslate="test04App.visitor.home.createLabel">
+            Create a new Visitor
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="visitors?.length === 0">
+        <span jhiTranslate="test04App.visitor.home.notFound">No visitors found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="visitors?.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
+                    <th scope="col" ><span jhiTranslate="test04App.visitor.name">Name</span></th>
+                    <th scope="col" ><span jhiTranslate="test04App.visitor.doctor">Doctor</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let visitor of visitors ;trackBy: trackId">
+                    <td><a [routerLink]="['/visitor', visitor.id, 'view']">{{ visitor.id }}</a></td>
+                    <td>{{ visitor.name }}</td>
+                    <td>
+                        <div *ngIf="visitor.doctor">
+                            <a [routerLink]="['/doctor', visitor.doctor?.id, 'view']" >{{ visitor.doctor?.id }}</a>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/visitor', visitor.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                            </button>
+
+                            <button type="submit"
+                                    [routerLink]="['/visitor', visitor.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(visitor)"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

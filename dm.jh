@@ -1,0 +1,12 @@
+entity Doctor {
+  name String
+}
+
+entity Visitor {
+  name String
+}
+
+relationship OneToMany {
+  Doctor to Visitor
+}
+
