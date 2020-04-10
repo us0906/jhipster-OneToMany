@@ -1,3 +1,10 @@
+# Erklärung
+
+Dieses Repo zeigt am denkbar einfachsten Beispiel eine funktionieren Master-Detail-Beziehung mit Darstellung der Beziehung in Swagger.
+
+Beachte dazu die Anpassungen im DoctorRepository.java bzw. DoctorResource.java.
+
+
 # test04
 
 This application was generated using JHipster 6.8.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.8.0](https://www.jhipster.tech/documentation-archive/v6.8.0).
